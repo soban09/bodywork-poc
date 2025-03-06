@@ -14,7 +14,7 @@ class RandomForrest:
         latest_model_path = None
         max_date = None
 
-        for file in os.listdir('./pipeline/model'):
+        for file in os.listdir('./model'):
             datestr = file.split('v')[1].split('.')[0]
             date = datetime.strptime(datestr, "%Y-%m-%dT%H-%M-%S")
             if (max_date is None) or (date > max_date):

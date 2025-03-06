@@ -12,7 +12,7 @@ logger = logging.getLogger()
 
 def load():
     logger.info("Loading the dataset...")
-    data = pd.read_csv('./pipeline/dataset/diabetes-dev.csv')
+    data = pd.read_csv('./dataset/diabetes-dev.csv')
     logger.info("Dataset loaded")
     return data
 
@@ -119,7 +119,8 @@ def save(model):
     current_time_stamp = datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
     model_version = "v" + current_time_stamp
 
-    model_directory = os.path.join('pipeline', 'model')
+    # model_directory = os.path.join('pipeline', 'model')
+    model_directory = './model'
     os.makedirs(model_directory, exist_ok=True)
     model_path = os.path.join(model_directory, 'model_' + model_version + '.pkl')
 
