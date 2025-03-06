@@ -15,7 +15,7 @@ stages:
       max_completion_time_seconds: 60
       retries: 2
   stage_2_scoring_service:
-    executable_module_path: pipeline/serve_model.py
+    executable_module_path: pipeline/serve_mode.py
     requirements:
       - Flask==3.1.0
       - numpy==2.0.2
