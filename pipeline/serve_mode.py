@@ -24,7 +24,7 @@ class RandomForrest:
         if latest_model_path is None:
             raise("No model folder was found, please train a mode first!")
         
-        pickle_file_path = os.path.join('pipeline', 'model', latest_model_path)
+        pickle_file_path = os.path.join('model', latest_model_path)
         with open(pickle_file_path, 'rb') as pickle_file:
             self.model = pickle.load(pickle_file)
 
